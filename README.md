@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # Otaghak code challenge
 
-#### Build a simple web app using Nextjs (TypeScript) and Tailwind, following this design, which allows the user to click the cards to see a product detail
+#### Build a simple web app using Nextjs (TypeScript) and Tailwind, following this [design](https://www.figma.com/file/4Hg0SjoCHcjQ7Yxa6muIzz/Otaghak-Code-Challenge?type=design&node-id=0%3A1&mode=design&t=wN9QNYn7K0miAvXa-1), which allows the user to click the cards to see a product detail
 
  Please create a branch of master branch in your name [ like yourName/feat/commitName ] and after completing the project, push your branch and make a pull request into master. 
 ```bash
