@@ -2,17 +2,22 @@ import { mediaBaseURL } from '@/constants/urls';
 import Image from 'next/image';
 import type { CityCardProps } from './types';
 import style from './style.module.css';
+import Link from 'next/link';
 
 export default function CityCard({
+	roomId,
 	seoTitle,
 	roomMediaTitles,
 	basePrice,
 	afterDiscount,
 	hasDiscount,
 }: CityCardProps) {
+
+	const detailPageUrl = `/room/${roomId}`
+
 	return (
 		<div>
-			<a>
+			<Link href={detailPageUrl}>
 				<Image
 					src={mediaBaseURL + roomMediaTitles.mainImageTitle}
 					width={315}
@@ -20,11 +25,11 @@ export default function CityCard({
 					alt={seoTitle}
 					className='rounded-xl object-cover h-[16.8rem] w-full'
 				/>
-			</a>
+			</Link>
 			<div className='flex flex-wrap items-center p-3 gap-y-1'>
-				<a className='block w-full text-lg font-semibold text-emphasize hover:text-hovered-emphasize'>
+				<Link href={detailPageUrl} className='block w-full text-lg font-semibold text-emphasize hover:text-hovered-emphasize'>
 					<h2>{seoTitle}</h2>
-				</a>
+				</Link>
 
 				<div className='text-tertiary font-light text-sm'>
 					هر شب از{' '}

@@ -9,7 +9,7 @@ export const roomSearch: RoomsSearch = async ({
 	top = 24,
 } = {}) => {
 	const filter =
-		(cityName && `cityCode eq ' ${cityName} ' and `) +
+		(cityName && `cityCode eq '${cityName}' and `) +
 		`includeAroundLocations eq ${includeAroundLocations}` +
 		`&$top=${top}` +
 		`&$skip=${skip}` +
