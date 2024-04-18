@@ -3,8 +3,8 @@ import type { InferGetServerSidePropsType, GetServerSidePropsContext } from 'nex
 import CityCard from './components/cityCard/cityCard';
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-	
-	return { props: await roomSearch({ cityName: context.params?.cityName?.toString(), skip: 24 }) };
+	const cityName = context.params?.cityName?.toString()
+	return { props: await roomSearch({ cityName, skip: 24 }) };
 }
 
 export default function CitiesList({

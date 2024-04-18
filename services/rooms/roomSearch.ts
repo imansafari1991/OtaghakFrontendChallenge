@@ -9,7 +9,7 @@ export const roomSearch: RoomsSearch = async ({
 	top = 24,
 } = {}) => {
 	const filter =
-		(cityName && `cityCode eq '${cityName}' and `) +
+		(cityName ? `cityCode eq '${cityName}' and ` : '') +
 		`includeAroundLocations eq ${includeAroundLocations}` +
 		`&$top=${top}` +
 		`&$skip=${skip}` +
@@ -33,5 +33,12 @@ export const roomSearch: RoomsSearch = async ({
 		`${baseURL}odata/Otaghak/RoomsSearch/SearchRooms()`,
 		requestOptions
 	);
-	return await res.json();
+
+	if (res.status === 200) return await res.json();
+
+	return {
+		count: 0,
+		id: 0,
+		rooms: [],
+	};
 };
