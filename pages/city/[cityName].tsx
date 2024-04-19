@@ -1,10 +1,11 @@
-import { roomSearch } from '@/services';
-import type {
-	InferGetServerSidePropsType,
-	GetServerSidePropsContext,
-} from 'next';
 import { ProductCard } from '@/components';
 import { mediaBaseURL } from '@/constants/urls';
+import { Container } from '@/layouts';
+import { roomSearch } from '@/services';
+import type {
+	GetServerSidePropsContext,
+	InferGetServerSidePropsType,
+} from 'next';
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
 	const cityName = context.params?.cityName?.toString();
@@ -16,7 +17,7 @@ export default function CitiesList({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
 	return (
 		<div className='bg-white'>
-			<div className='mx-6 sm:container sm:mx-auto'>
+			<Container>
 				<h1>اجاره اتاق، خانه، سوئیت و آپارتمان 24 ساعتی در تهران</h1>
 				<div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-9 sm:gap-4'>
 					{rooms.map(
@@ -40,7 +41,7 @@ export default function CitiesList({
 						)
 					)}
 				</div>
-			</div>
+			</Container>
 		</div>
 	);
 }
