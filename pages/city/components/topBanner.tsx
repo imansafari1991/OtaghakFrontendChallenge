@@ -14,7 +14,7 @@ export default function TopBanner() {
 				alt={alt}
 			/>
 			<Image
-				className='hidden sm:block'
+				className='hidden sm:block w-full max-h-[640px] object-cover object-left-top'
 				src={topBannerImage.src}
 				width={topBannerImage.width}
 				height={topBannerImage.height}
