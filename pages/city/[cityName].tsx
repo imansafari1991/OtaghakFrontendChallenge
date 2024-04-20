@@ -20,7 +20,7 @@ export default function CitiesList({
 		<div className='bg-white'>
 			<TopBanner />
 			<Container>
-				<h1>اجاره اتاق، خانه، سوئیت و آپارتمان 24 ساعتی در تهران</h1>
+				<h1 className='font-bold text-xl mb-4 sm:mb-8'>اجاره اتاق، خانه، سوئیت و آپارتمان 24 ساعتی در تهران</h1>
 				<div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-9 sm:gap-4'>
 					{rooms.map(
 						({
