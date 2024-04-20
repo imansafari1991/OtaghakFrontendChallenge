@@ -6,34 +6,44 @@ import {
 	HouseAddSeatIcon,
 	SupportIcon,
 	UserProfileIcon,
-} from '@/assets/icons';
+} from '@/icons';
 
 export default function MainHeader() {
 	const logoUrl =
 		'https://cdn.otaghak.com/otg-images-new/Web/Icon/general/logotype-large.svg';
 	return (
-		<header className='bg-white'>
-			<Container className='flex'>
+		<header className='bg-white border-b border-tertiary-outlined-border'>
+			<Container className='flex h-20 items-center'>
 				<Image src={logoUrl} width={112} height={44} alt='Otaghak' />
 				<Button
-					className='ms-auto'
+					className='ms-auto hidden sm:flex'
 					href='#'
 					icon={<HouseAddSeatIcon />}
-					separator='left'
+					leftSeparated
 				>
 					میزبان شوید
 				</Button>
 				<Button
+					className='hidden sm:flex'
 					href='#'
 					icon={<DownloadReceiveIcon />}
-					separator='left'
+					leftSeparated
 				>
 					دانلود اپلیکیشن
 				</Button>
-				<Button href='#' icon={<SupportIcon />} separator='left'>
+				<Button
+					className='hidden sm:flex'
+					href='#'
+					icon={<SupportIcon />}
+					leftSeparated
+				>
 					پشتیبانی
 				</Button>
-				<Button href='#' icon={<UserProfileIcon />}>
+				<Button
+					className='hidden sm:flex'
+					href='#'
+					icon={<UserProfileIcon />}
+				>
 					ورود / ثبت نام
 				</Button>
 			</Container>

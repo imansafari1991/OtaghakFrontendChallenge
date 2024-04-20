@@ -6,6 +6,7 @@ import type {
 	GetServerSidePropsContext,
 	InferGetServerSidePropsType,
 } from 'next';
+import TopBanner from './components/topBanner';
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
 	const cityName = context.params?.cityName?.toString();
@@ -17,6 +18,7 @@ export default function CitiesList({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
 	return (
 		<div className='bg-white'>
+			<TopBanner />
 			<Container>
 				<h1>اجاره اتاق، خانه، سوئیت و آپارتمان 24 ساعتی در تهران</h1>
 				<div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-9 sm:gap-4'>

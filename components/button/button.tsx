@@ -4,7 +4,7 @@ import type { ButtonProps } from './types';
 export default function Button({
 	children,
 	icon,
-	separator,
+	leftSeparated,
 	className,
 	...props
 }: ButtonProps) {
@@ -16,9 +16,9 @@ export default function Button({
 				${className ?? ''}`}
 			{...props}
 		>
-			{separator && (
+			{leftSeparated && (
 				<span
-					className={`absolute ${separator}-0 top-3 bottom-3 block 
+					className={`absolute left-0 top-3 bottom-3 block 
 								border-s border-tertiary-outlined-border`}
 				></span>
 			)}
