@@ -5,4 +5,5 @@ export type ButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> &
 	LinkProps & {
 		children: ReactNode;
 		icon?: ReactNode;
+		separator?: 'right' | 'left'
 	};

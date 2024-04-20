@@ -1,3 +1,4 @@
+import { MainHeader } from '@/layouts';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 
@@ -10,8 +11,9 @@ const font = localFont({
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-		<main className={font.className}>
+		<div className={font.className}>
+			<MainHeader />
 			<Component {...pageProps} />;
-		</main>
+		</div>
 	);
 }
