@@ -7,9 +7,17 @@ export default function MainHeader() {
 		'https://cdn.otaghak.com/otg-images-new/Web/Icon/general/logotype-large.svg';
 	return (
 		<header className='bg-white'>
-			<Container>
-			<Image src={logoUrl} width={112} height={44} alt='Otaghak' />
-			<Button href=''>Test</Button>
+			<Container className='flex'>
+				<Image src={logoUrl} width={112} height={44} alt='Otaghak' />
+				<Button className='ms-auto' href=''>
+					Test
+				</Button>
+				<hr />
+				<Button href=''>Test</Button>
+				<hr />
+				<Button href=''>Test</Button>
+				<hr />
+				<Button href=''>Test</Button>
 			</Container>
 		</header>
 	);

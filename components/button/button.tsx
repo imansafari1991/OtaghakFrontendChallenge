@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import type { ButtonProps } from './types';
-import style from './style.module.css';
 
 export default function Button({
 	children,
@@ -9,7 +8,7 @@ export default function Button({
 	...props
 }: ButtonProps) {
 	return (
-		<Link {...props} className={`${style.btn} ${className ?? ''}`}>
+		<Link {...props} className={`inline-block p-3 bg-transparent ${className ?? ''}`}>
 			{children}
 		</Link>
 	);
